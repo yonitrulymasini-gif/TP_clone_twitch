@@ -46,6 +46,7 @@ CREATE TABLE `chat` (
   						conversation_publique VARCHAR (150),
 						id_user INT NOT NULL,
   						id_role INT NOT NULL,
+  						viewer INT NOT NULL,
   						 CONSTRAINT fk_role_chat
                                  FOREIGN KEY (id_role)
                                      REFERENCES `role`(id_role)
@@ -57,12 +58,12 @@ CREATE TABLE `chat` (
                                      ON DELETE RESTRICT);
                          
 
-INSERT INTO `chat` (id_chat, conversation_publique, id_user, id_role) VALUES
-(1, 'Bonjour Maître Yoni', 2, 1),
-(2, 'Bonjour Maître KASPAROV', 3, 1),
-(3, 'Bienvenue dans le chat du CESI', 2, 1),
-(4, 'Bonjour Julien', 3, 4),
-(5, 'Bonjour Monsieur le Président', 3, 1)
+INSERT INTO `chat` (id_chat, conversation_publique, id_user, id_role,viewer) VALUES
+(1, 'Bonjour Maître Yoni', 2, 1,300),
+(2, 'Bonjour Maître KASPAROV', 3, 1,10),
+(3, 'Bienvenue dans le chat du CESI', 2, 1,3),
+(4, 'Bonjour Julien', 3, 4,100),
+(5, 'Bonjour Monsieur le Président', 3, 1,650)
 ;
  
 CREATE TABLE `points` (
