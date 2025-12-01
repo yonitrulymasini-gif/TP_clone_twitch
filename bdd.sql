@@ -14,7 +14,7 @@ CREATE TABLE `user` (
 );
 
 INSERT INTO `user` (id_user, nom, prenom, pseudo, email, date_naissance, adresse, code_postal, ville, telephone) VALUES
-(1, 'DUPONT', 'Paul', 'dupaul_Warrior','paul@yahoo.fr', '2002-12-20', '12 rue de Lyon', 62000, 'Arras', 0321247809),
+(1, 'DUPONT', 'Paul', 'dupaul_Warrior','paul@yahoo.fr', '2015-12-20', '12 rue de Lyon', 62000, 'Arras', 0321247809),
 (2, 'DURAND', 'Jérémie', 'jerem_cesi','jeremie@yahoo.fr', '2001-11-02', '18 rue de Paris', 59000, 'Lille', 0321247812),
 (3, 'MARCHAND', 'Pauline', 'pauline_championne','pauline@google.fr', '1999-10-21', '20 avenue du Paradis', 59000, 'Lille', 0321247890),
 (4, 'CESI', 'Alberto', 'alberto_champion','alberto@google.fr', '1998-10-21', '8 avenue du chti', 59500, 'Douai', 0321247811),
