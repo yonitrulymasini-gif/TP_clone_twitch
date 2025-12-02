@@ -1,5 +1,3 @@
-/* TP CLONE TWITCH */
-
 CREATE TABLE `user` (
 						id_user INT AUTO_INCREMENT PRIMARY KEY,			
   						nom VARCHAR (50) NOT NULL,
@@ -24,9 +22,7 @@ INSERT INTO `user` (id_user, nom, prenom, pseudo, email, date_naissance, adresse
 --
 CREATE TABLE `role` (
 						id_role INT AUTO_INCREMENT PRIMARY KEY,			
-  						streameur VARCHAR (150),
-						moderateur VARCHAR (150),
-  						simple_user VARCHAR (150),
+  						nom_role VARCHAR (150),
   						id_user INT NOT NULL,
   						 CONSTRAINT fk_role_user
                                  FOREIGN KEY (id_user)
@@ -34,12 +30,12 @@ CREATE TABLE `role` (
                                      ON DELETE RESTRICT
 );
 
-INSERT INTO `role` (id_role, streameur, moderateur, simple_user, id_user) VALUES
-(1, '', 'Modérateur', '', 1),
-(2, 'Streameur', ' ', '',2),
-(3, ' ', ' ', 'Simple User', 1),
-(4, ' ', ' ', 'Simple user',4),
-(5, ' ', ' ', 'Simple user',5);
+INSERT INTO `role` (id_role, nom_role, id_user) VALUES
+(1, 'Modérateur', 1),
+(2, 'Streameur', 2),
+(3, 'Streameur', 3),
+(4, 'Simple user',4),
+(5, 'Streameur', 5);
 
 CREATE TABLE `chat` (
 						id_chat INT AUTO_INCREMENT PRIMARY KEY,			
